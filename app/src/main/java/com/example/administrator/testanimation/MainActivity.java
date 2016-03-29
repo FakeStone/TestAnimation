@@ -1,5 +1,6 @@
 package com.example.administrator.testanimation;
 
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,7 +19,7 @@ import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
-
+//学习网站 http://www.360doc.com/content/13/0102/22/6541311_257754535.shtml
 public class MainActivity extends AppCompatActivity {
 
     private Button alpha;
@@ -55,8 +56,9 @@ public class MainActivity extends AppCompatActivity {
         alpha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Animation anim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.alpha);
-                image.startAnimation(anim);
+                image.setBackgroundResource(R.anim.anim);
+                AnimationDrawable anidraw = (AnimationDrawable)image.getBackground();
+                anidraw.start();
             }
         });
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android"
-    android:interpolator="@android:anim/accelerate_interpolator">
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+    android:shareInterpolator="true">
     <alpha
         android:fromAlpha="0"
         android:toAlpha="1"
@@ -8,5 +9,11 @@
         android:startOffset="500">
         <!--0是完全透明的-->
     </alpha>
+    <translate
+        android:fromXDelta="0%"
+        android:toXDelta="100%"
+        android:fromYDelta="0%"
+        android:duration="3000"
+        android:toYDelta="100%"/>
 </set>
 
